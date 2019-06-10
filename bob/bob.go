@@ -15,9 +15,9 @@ Challenge
 - He says 'Fine. Be that way!' if you address him without actually saying anything.
 - He answers 'Whatever.' to anything else.
 Bob's conversational partner is a purist when it comes to written communication and always follows normal rules regarding sentence punctuation in English.
- */
+*/
 
-func HasLetters(remark string) bool{
+func HasLetters(remark string) bool {
 	flag := false
 	for _, character := range remark {
 		flag = flag || unicode.IsLetter(character)
@@ -25,13 +25,12 @@ func HasLetters(remark string) bool{
 	return flag
 }
 
-
 // Makes Bob respond based on the remarks from Alice
 func Hey(remark string) string {
 
 	remark = strings.TrimSpace(remark)
 
-	question := strings.HasSuffix(remark,"?")
+	question := strings.HasSuffix(remark, "?")
 	yell := strings.Compare(remark, strings.ToUpper(remark)) == 0 && HasLetters(remark)
 	empty := strings.Compare(strings.TrimSpace(remark), "") == 0
 
