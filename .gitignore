@@ -13,3 +13,6 @@
 
 # IntelliJ/GoLand files
 .idea
+
+# Exercism directories/files
+.exercism
